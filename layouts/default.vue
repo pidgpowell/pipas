@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <h1>Pipas</h1>
+  <div class="p-4">
+    <h1 class="text-4xl font-bold tracking-tight">
+      Pipas
+    </h1>
     <Nuxt />
   </div>
 </template>
