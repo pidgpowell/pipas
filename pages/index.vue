@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>It's alive...(Nuxt version)</p>
+    <p>It's alive...</p>
   </div>
 </template>
 
