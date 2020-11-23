@@ -10,6 +10,6 @@
 
 <style scoped>
 div {
-  background: url(/background-mountains.gif) top left;
+  background: url(https://res.cloudinary.com/pipas/image/upload/v1606135066/background-mountains_dretlx.gif) top left;
 }
 </style>
