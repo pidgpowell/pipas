@@ -1,26 +1,27 @@
 <template>
   <div>
     <h2 class="pt-2">Tour Dates</h2>
+
     <div class="bg-white bg-opacity-70 my-6">
-    <table class="mt-4 table-auto border-collapse w-full rounded">
-      <thead>
-        <!-- #198c53 -->
-        <tr class="text-sm font-light text-left">
-          <th class="rounded-tl-sm px-3 py-2 bg-green-400 text-white font-heavy">Date</th>
-          <th class="px-3 py-2 bg-green-400 text-white font-heavy">Venue</th>
-          <th class="px-3 py-2 bg-green-400 text-white font-heavy">City</th>
-          <th class="rounded-tr-sm px-3 py-2 bg-green-400 text-white font-heavy">Country</th>
-        </tr>
-      </thead>
-      <tbody class="text-sm font-normal">
-        <tr v-for="(tourdate, index) in tourdates" :key="index" class="hover:bg-gray-100 border-b border-gray-200 py-4">
-          <td class="p-3">{{ tourdate.dateFormatted}}</td>
-          <td class="p-3" v-html="tourdate.venue"></td>
-          <td class="p-3">{{ tourdate.city}}</td>
-          <td class="p-3">{{ tourdate.countryFormatted}}</td>
-        </tr>
-      </tbody>
-    </table>
+      <table class="mt-4 table-auto border-collapse w-full rounded">
+        <thead>
+          <!-- #198c53 -->
+          <tr class="text-sm font-light text-left">
+            <th class="rounded-tl-sm px-3 py-2 bg-green-400 text-white font-heavy">Date</th>
+            <th class="px-3 py-2 bg-green-400 text-white font-heavy">Venue</th>
+            <th class="px-3 py-2 bg-green-400 text-white font-heavy">City</th>
+            <th class="rounded-tr-sm px-3 py-2 bg-green-400 text-white font-heavy">Country</th>
+          </tr>
+        </thead>
+        <tbody class="text-sm font-normal">
+          <tr v-for="(tourdate, index) in tourdates" :key="index" class="hover:bg-gray-100 border-b border-gray-200 py-4">
+            <td class="p-3">{{ tourdate.dateFormatted}}</td>
+            <td class="p-3" v-html="tourdate.venue"></td>
+            <td class="p-3">{{ tourdate.city}}</td>
+            <td class="p-3">{{ tourdate.countryFormatted}}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </template>

@@ -1,11 +1,5 @@
 <template>
   <div>
-    <p>It's alive...</p>
+    <h2 class="pt-2">It's alive...</h2>
   </div>
 </template>
-
-<script>
-export default {
-
-}
-</script>
