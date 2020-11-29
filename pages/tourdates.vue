@@ -1,6 +1,11 @@
 <template>
   <div>
-    <h2 class="mt-2">Tour Dates</h2>
+    <h2 class="mt-2 text-xl border-b pb-2 mb-3 border-emerald-300">Tour Dates</h2>
+
+    <h3 class="mt-2">The Future</h3>
+    <p class="text-gray-400">...is hazy.</p>
+
+    <h3 class="mt-2">The Past</h3>
 
     <div class="rounded-t-sm sm:rounded-t-md bg-gradient-to-r from-emerald-50 to-teal-100 sm:p-1 mt-3">
       <table class="table-auto">
