@@ -1,7 +1,7 @@
 <template>
-  <div class="p-4 h-auto">
+  <div class="p-2 sm:p-4 h-auto">
     <h1 class="text-4xl font-bold tracking-tight">
-      Pipas
+      <nuxt-link to="/">Pipas</nuxt-link>
     </h1>
     <Nuxt />
   </div>
