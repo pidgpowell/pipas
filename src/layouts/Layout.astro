@@ -1,0 +1,77 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const { url } = Astro.request;
+
+const nav = [
+  {
+    href: "/",
+    text: "Home",
+  },
+  {
+    href: "/tourdates",
+    text: "Tour Dates",
+  },
+];
+const pathname = new URL(url).pathname;
+const pathCheck =
+  pathname.length > 1 && pathname.endsWith("/")
+    ? pathname.slice(0, -1)
+    : pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Website for Pipas, a band from London and New York City."
+    />
+    <meta
+      name="viewport"
+      content="width=device-width"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+    <title>{title}</title>
+  </head>
+  <body class="p-2 sm:p-4 h-auto">
+    <header class="flex flex-col sm:flex-row sm:items-center">
+      <h1 class="text-4xl font-bold tracking-tight">Pipas</h1>
+      <nav class="sm:text-right w-full p-0">
+        {
+          nav.map((link) => (
+            <a
+              href={link.href}
+              class="text-md"
+              class:list={[
+                {
+                  "text-green-700": pathCheck === link.href,
+                  "hover:text-emerald-900": pathCheck === link.href,
+                },
+              ]}
+            >
+              {link.text}
+            </a>
+          ))
+        }
+      </nav>
+    </header>
+
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  body {
+    background: url(https://res.cloudinary.com/pipas/image/upload/v1606135066/background-mountains_dretlx.gif)
+      0 0 repeat;
+  }
+</style>

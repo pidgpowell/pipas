@@ -1,0 +1,66 @@
+---
+import { db, Tourdate, desc } from "astro:db";
+import Layout from "../layouts/Layout.astro";
+import dateFormat from "../utils/dateFormat";
+const tourdates = await db.select().from(Tourdate).orderBy(desc(Tourdate.date));
+const countryCodes: Record<string, string> = {
+  "GB-ENG": "England",
+  "GB-SCT": "Scotland",
+  ES: "Spain",
+  SE: "Sweden",
+  EE: "Estonia",
+  GR: "Greece",
+  DE: "Germany",
+  US: "U.S.",
+  IT: "Italy",
+  AU: "Australia",
+};
+---
+
+<Layout title="Tourdates | Pipas">
+  <div>
+    <h2 class="mt-2 text-xl border-b pb-2 mb-3 border-emerald-300">
+      Tour Dates
+    </h2>
+
+    <h3 class="mt-2">The Future</h3>
+
+    <p class="text-gray-400">...is hazy.</p>
+
+    <h3 class="mt-2">The Past</h3>
+
+    <div
+      class="rounded-t-sm sm:rounded-t-md bg-gradient-to-r from-emerald-50 to-teal-100/10 sm:p-1 mt-3"
+    >
+      <table class="table-auto">
+        <thead>
+          <tr class="text-sm font-light text-left">
+            <th class="pl-2 py-1 text-emerald-600 min-w-20">Date</th>
+            <th class="pl-3 py-2 text-emerald-600">Venue</th>
+            <th class="pl-2 py-2 text-emerald-600">Country</th>
+          </tr>
+        </thead>
+        <tbody class="font-normal">
+          {
+            tourdates.map(({ date, venue, city, country, other }) => (
+              <tr class="hover:bg-emerald-100 border-b border-emerald-100">
+                <td class="pl-2 pb-2 pt-2 align-top leading-tight text-emerald-900">
+                  {dateFormat(date)}
+                </td>
+                <td class="pl-3 pt-2 pb-2 align-top max-w-xs leading-tight">
+                  {venue}, {city}
+                  <div class="text-gray-600">
+                    <Fragment set:html={other} />
+                  </div>
+                </td>
+                <td class="pl-2 pb-2 pt-2 align-top leading-tight">
+                  {countryCodes[country]}
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</Layout>
