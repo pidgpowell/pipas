@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# Pipas -- Astro -- Hosted on Netlify
 
 ```sh
 npm create astro@latest -- --template basics
