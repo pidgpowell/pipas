@@ -16,30 +16,30 @@ const { tourdates } = Astro.props;
 ---
 
 <section
-  class="mb-4 rounded-t-sm sm:rounded-t-md bg-gradient-to-r from-emerald-50/70 to-teal-100/10 sm:p-1 mt-3"
+  class="mt-3 mb-4 rounded-t-sm sm:rounded-t-md bg-gradient-to-r from-emerald-50/70 to-teal-100/10 sm:p-1"
 >
   <table class="table-auto">
     <thead>
       <tr class="text-sm font-light text-left">
-        <th class="pl-2 py-1 text-emerald-600 min-w-20">Date</th>
-        <th class="pl-3 py-2 text-emerald-600">Venue</th>
-        <th class="pl-2 py-2 text-emerald-600">Country</th>
+        <th class="py-1 pl-2 text-emerald-600 min-w-20">Date</th>
+        <th class="py-2 pl-3 text-emerald-600">Venue</th>
+        <th class="py-2 pl-2 text-emerald-600">Country</th>
       </tr>
     </thead>
     <tbody class="font-normal">
       {
         tourdates.map(({ date, venue, city, country, other }) => (
-          <tr class="hover:bg-emerald-100 border-b border-emerald-100">
-            <td class="pl-2 pb-2 pt-2 align-top leading-tight text-emerald-900">
+          <tr class="border-b hover:bg-emerald-100 border-emerald-100">
+            <td class="py-2 pl-2 leading-tight align-top text-emerald-900">
               {dateFormat(date)}
             </td>
-            <td class="pl-3 pt-2 pb-2 align-top max-w-xs leading-tight">
+            <td class="max-w-xs py-2 pl-3 leading-tight align-top">
               {venue}, {city}
               <div class="text-gray-600">
                 <Fragment set:html={other} />
               </div>
             </td>
-            <td class="pl-2 pb-2 pt-2 align-top leading-tight">
+            <td class="py-2 pl-2 leading-tight align-top">
               {countryCodes[country]}
             </td>
           </tr>
