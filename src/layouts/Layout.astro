@@ -12,6 +12,10 @@ const nav = [
     text: "Home",
   },
   {
+    href: "/blog",
+    text: "Blog",
+  },
+  {
     href: "/tourdates",
     text: "Tour Dates",
   },
@@ -73,5 +77,29 @@ const pathCheck =
   body {
     background: url(https://res.cloudinary.com/pipas/image/upload/v1606135066/background-mountains_dretlx.gif)
       0 0 repeat;
+  }
+  .metadata {
+    @apply text-sm mb-1;
+  }
+  .prose h3 {
+    @apply text-2xl mb-6 leading-8 font-semibold;
+  }
+  .prose h4 {
+    @apply text-lg leading-snug mb-3;
+  }
+  .prose p {
+    @apply text-lg sm:text-base mb-4;
+  }
+  .prose strong {
+    @apply font-semibold;
+  }
+  .prose ul {
+    @apply list-disc ml-4 mb-4;
+  }
+  .prose ul li {
+    @apply mb-2;
+  }
+  .prose .line-clamp-3 p {
+    @apply mb-0;
   }
 </style>
