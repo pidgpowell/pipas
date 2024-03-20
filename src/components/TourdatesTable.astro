@@ -1,0 +1,50 @@
+---
+import dateFormat from "../utils/dateFormat";
+import countryCodes from "../utils/countryCodes";
+
+interface Props {
+  tourdates: {
+    date: Date;
+    venue: string;
+    city: string;
+    country: string;
+    other: string;
+  }[];
+}
+
+const { tourdates } = Astro.props;
+---
+
+<section
+  class="mb-4 rounded-t-sm sm:rounded-t-md bg-gradient-to-r from-emerald-50/70 to-teal-100/10 sm:p-1 mt-3"
+>
+  <table class="table-auto">
+    <thead>
+      <tr class="text-sm font-light text-left">
+        <th class="pl-2 py-1 text-emerald-600 min-w-20">Date</th>
+        <th class="pl-3 py-2 text-emerald-600">Venue</th>
+        <th class="pl-2 py-2 text-emerald-600">Country</th>
+      </tr>
+    </thead>
+    <tbody class="font-normal">
+      {
+        tourdates.map(({ date, venue, city, country, other }) => (
+          <tr class="hover:bg-emerald-100 border-b border-emerald-100">
+            <td class="pl-2 pb-2 pt-2 align-top leading-tight text-emerald-900">
+              {dateFormat(date)}
+            </td>
+            <td class="pl-3 pt-2 pb-2 align-top max-w-xs leading-tight">
+              {venue}, {city}
+              <div class="text-gray-600">
+                <Fragment set:html={other} />
+              </div>
+            </td>
+            <td class="pl-2 pb-2 pt-2 align-top leading-tight">
+              {countryCodes[country]}
+            </td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</section>

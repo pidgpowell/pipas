@@ -481,7 +481,7 @@ export default async function seed() {
 			city: "London",
 			country: "GB-ENG",
 			url: "",
-			other: "<a href=\"http://www.theclientele.co.uk/\"  rel=\"noopener\">clientele</a> record release show! <a href=\"http://www.wegottickets.com/event/6512\"  rel=\"noopener\">buy tickets here!</a>"
+			other: "<a href=\"http://www.theclientele.co.uk/\"  rel=\"noopener\">clientele</a> record release show! "
 		},
 		{
 			date: new Date("2005-10-02"),
@@ -665,7 +665,7 @@ export default async function seed() {
 			city: "Berlin",
 			country: "DE",
 			url: "",
-			other: "leipzig back on for the 28th!!!!"
+			other: ""
 		},
 		{
 			date: new Date("2006-12-01"),
@@ -697,7 +697,7 @@ export default async function seed() {
 			city: "San Francisco, CA",
 			country: "US",
 			url: "",
-			other: "all ages! w/ <a href=\"http://myspace.com/landofillearthquakes\" rel=\"noopener\">land of ill earthquakes</a> & bye bye blackbirds. <a href=\"http://virtuous.com/events/v/449226232/2007-05-17.html\" rel=\"noopener\">BUY TICKETS HERE!</a>"
+			other: "all ages! w/ <a href=\"http://myspace.com/landofillearthquakes\" rel=\"noopener\">land of ill earthquakes</a> & bye bye blackbirds."
 		},
 		{
 			date: new Date("2007-05-19"),
