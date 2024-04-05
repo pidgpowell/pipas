@@ -11,10 +11,24 @@ const Tourdate = defineTable({
   }
 })
 
+const Release = defineTable({
+  columns: {
+    date: column.date(),
+    title: column.text(),
+    cat: column.text(),
+    hasImage: column.boolean({ optional: true }),
+    format: column.number(),
+    label: column.text(),
+    tracklisting: column.text({ optional: true }),
+    notes: column.text({ optional: true }),
+  }
+})
+
 
 // https://astro.build/db/config
 export default defineDb({
   tables: {
-    Tourdate
+    Tourdate,
+    Release
   }
 });

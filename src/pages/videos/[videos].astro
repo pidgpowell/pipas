@@ -1,0 +1,45 @@
+---
+import { YouTube } from "astro-embed";
+
+const videoLookup = {
+  runrunrun: {
+    id: "xI0prHC9pcA",
+    poster: "/pipas_runrunrun_still.jpg",
+  },
+  riffraff: {
+    id: "K48AA3Lo5b0",
+    poster: "/pipas_runrunrun_still.jpg",
+  },
+  youcrash: {
+    id: "4kKTwOl0GI8",
+    poster: "/pipas_runrunrun_still.jpg",
+  },
+} as { [key: string]: { id: string; poster: string } };
+
+export function getStaticPaths() {
+  return [
+    {
+      params: {
+        videos: "runrunrun",
+      },
+    },
+    {
+      params: {
+        videos: "riffraff",
+      },
+    },
+    {
+      params: {
+        videos: "youcrash",
+      },
+    },
+  ];
+}
+
+const { videos } = Astro.params;
+---
+
+<YouTube
+  id={videoLookup[videos].id}
+  poster={videoLookup[videos].poster}
+/>

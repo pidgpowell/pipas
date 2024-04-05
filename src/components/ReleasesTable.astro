@@ -1,0 +1,45 @@
+---
+import dateFormat from "../utils/dateFormat";
+import { formats } from "../types/formats";
+import type { Release as ReleaseType } from "../types/release";
+import Cover from "./Cover.astro";
+import { marked } from "marked";
+
+interface Props {
+  releases: ReleaseType[];
+  size?: "sm" | "md" | "lg";
+}
+
+const { releases, size } = Astro.props;
+---
+
+<section class="space-y-8 mt-3 mb-4 sm:p-1">
+  {
+    releases.map(({ date, title, cat, format, label, tracklisting }) => (
+      <div>
+        <p class="text-xs uppercase">
+          {dateFormat(date, {
+            day: undefined,
+            month: "short",
+            timeZone: "UTC",
+          })}
+        </p>
+        <h4 class="font-bold text-lg mb-2">
+          <Fragment set:html={title} />
+        </h4>
+        <Cover
+          src={"../../assets/disc/" + cat + ".webp"}
+          alt="Cover image"
+          size={size}
+        />
+        <p>
+          <Fragment set:html={label} />
+          {formats[format]}
+          <span class="opacity-60 uppercase text-sm">({cat})</span>
+        </p>
+
+        {tracklisting && <Fragment set:html={marked.parse(tracklisting)} />}
+      </div>
+    ))
+  }
+</section>
