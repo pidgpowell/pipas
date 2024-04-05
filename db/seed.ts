@@ -244,7 +244,7 @@ export default async function seed() {
       country: "SE",
       url: "",
       other:
-        'w/ <a href="http://www.eisenhower.se"  rel="noopener">eisenhower</a> & <a href="http://www.reagh.net"  rel="noopener">richard reagh</a>',
+        'w/ eisenhower & richard reagh',
     },
     {
       date: new Date("2004-02-29"),
@@ -253,7 +253,7 @@ export default async function seed() {
       country: "GB-ENG",
       url: "",
       other:
-        'next to highbury & islington tube station w/ <a href="http://www.newherenowlive.com/lostandlonesome/refer.php?page=The%20Mosquitoes&band=The%20Mosquitoes"  rel="noopener">the mosquitoes</a> (u.s.), the cut-outs',
+        'next to highbury & islington tube station w/ <a href="https://lostandlonesome.com.au"  rel="noopener">the mosquitoes</a> (u.s.), the cut-outs',
     },
     {
       date: new Date("2004-03-12"),
@@ -261,8 +261,7 @@ export default async function seed() {
       city: "Madrid",
       country: "ES",
       url: "",
-      other:
-        '<a href="http://www.barbarellaclub.com"  rel="noopener">www.barbarellaclub.com</a>',
+      other: '',
     },
     {
       date: new Date("2004-04-21"),
@@ -271,7 +270,7 @@ export default async function seed() {
       country: "GB-ENG",
       url: "",
       other:
-        'a <a href="http://www.trackandfield.org.uk"  rel="noopener">track & field</a> event w/ aberfeldy (new rough trade signings)',
+        'a track & field event w/ aberfeldy (new rough trade signings)',
     },
     {
       date: new Date("2004-04-30"),
@@ -388,7 +387,7 @@ export default async function seed() {
       country: "DK",
       url: "",
       other:
-        '<a href="http://www.poprevolution.dk" rel="noopener">www.poprevolution.dk</a> w/ the clientele, radio dept, comet gain, action biker &amp; more',
+        'www.poprevolution.dk w/ the clientele, radio dept, comet gain, action biker &amp; more',
     },
     {
       date: new Date("2004-11-12"),
@@ -397,7 +396,7 @@ export default async function seed() {
       country: "SE",
       url: "",
       other:
-        'w/ <a href="http://www.handsometrain.com"  rel="noopener">handsome train</a>',
+        'w/ handsome train',
     },
     {
       date: new Date("2004-11-13"),
@@ -406,7 +405,7 @@ export default async function seed() {
       country: "DK",
       url: "",
       other:
-        '<a href="http://dibidut.dk/carryondreaming/"  rel="noopener">show info</a> w/ <a href="http://www.ampel.dk"  rel="noopener">ampel</a>',
+        'w/ ampel',
     },
     {
       date: new Date("2004-12-10"),
@@ -415,7 +414,7 @@ export default async function seed() {
       country: "GB-ENG",
       url: "",
       other:
-        'chickfactor\'s <a href="http://www.chickfactor.com"  rel="noopener">mon gala papillons</a>  w/ television personalities, stevie jackson (from belle & sebastian),  mascott',
+        'chickfactor\'s <a href="https://www.chickfactor.com" rel="noopener">mon gala papillons</a>  w/ television personalities, stevie jackson (from belle & sebastian),  mascott',
     },
     {
       date: new Date("2005-01-21"),
@@ -424,7 +423,7 @@ export default async function seed() {
       country: "GR",
       url: "",
       other:
-        '<a href="http://www.friendsoftheheroes.co.uk/pipas/"  rel="noopener">for more info on the show</a>. persefonis 61 & dekeleon 12, gazi. tel 2103454604. w/ <a  rel="noopener"  href="http://www.friendsoftheheroes.co.uk/reviews/music/week12.html">the occasional flickers</a>',
+        '<a href="http://www.friendsoftheheroes.co.uk/pipas/" rel="noopener">for more info on the show</a>. persefonis 61 & dekeleon 12, gazi. tel 2103454604. w/ <a  rel="noopener"  href="http://www.friendsoftheheroes.co.uk/reviews/music/week12.html">the occasional flickers</a>',
     },
     {
       date: new Date("2005-05-05"),
@@ -504,7 +503,7 @@ export default async function seed() {
       country: "GB-ENG",
       url: "",
       other:
-        '<a href="http://www.theclientele.co.uk/"  rel="noopener">clientele</a> record release show! ',
+        '<a href="https://www.theclientele.co.uk/"  rel="noopener">clientele</a> record release show! ',
     },
     {
       date: new Date("2005-10-02"),
@@ -716,7 +715,7 @@ export default async function seed() {
       country: "ES",
       url: "",
       other:
-        'w/ <strong>alasdair</strong> from <a href="http://www.theclientele.co.uk/" rel="noopener">the clientele</a>',
+        'w/ <strong>alasdair</strong> from <a href="https://www.theclientele.co.uk/" rel="noopener">the clientele</a>',
     },
     {
       date: new Date("2006-12-02"),
@@ -725,7 +724,7 @@ export default async function seed() {
       country: "ES",
       url: "",
       other:
-        'w/ <strong>alasdair</strong> from <a href="http://www.theclientele.co.uk/" rel="noopener">the clientele</a>!',
+        'w/ <strong>alasdair</strong> from <a href="https://www.theclientele.co.uk/" rel="noopener">the clientele</a>!',
     },
     {
       date: new Date("2006-12-04"),
@@ -788,7 +787,7 @@ export default async function seed() {
       country: "US",
       url: "",
       other:
-        'w/ <a href="http://www.theclientele.co.uk" rel="noopener">the clientele</a>!',
+        'w/ <a href="https://www.theclientele.co.uk" rel="noopener">the clientele</a>!',
     },
     {
       date: new Date("2007-05-27"),
@@ -815,7 +814,7 @@ export default async function seed() {
       country: "US",
       url: "",
       other:
-        'w/ <a href="http://www.theclientele.co.uk" rel="noopener">the clientele</a> ',
+        'w/ <a href="https://www.theclientele.co.uk" rel="noopener">the clientele</a>',
     },
     {
       date: new Date("2007-06-11"),
@@ -824,16 +823,15 @@ export default async function seed() {
       country: "US",
       url: "",
       other:
-        '<a href="http://www.theladybugtransistor.com" target="_blank" title="the ladybug transistor">the ladybug transistor</a>  new record release party, with solo set by alasdair maclean of <a href="http://www.theclientele.co.uk" rel="noopener">the clientele</a> !',
+        '<a href="https://theladybugtransistor.bandcamp.com/music" target="_blank" title="the ladybug transistor">the ladybug transistor</a>  new record release party, with solo set by alasdair maclean of <a href="https://www.theclientele.co.uk" rel="noopener">the clientele</a> !',
     },
     {
       date: new Date("2008-07-19"),
       venue: "Rip It Up",
       city: "Saffle",
       country: "SE",
-      url: "myspace.com/ripitup07",
-      other:
-        '<a href="http://myspace.com/ripitup07" rel="noopener">web site</a>',
+      url: "",
+      other: ""
     },
     {
       date: new Date("2012-04-11"),
@@ -892,9 +890,9 @@ export default async function seed() {
       title: "v/a The Matinée Summer Splash",
       cat: "mat040",
       hasImage: true,
-      format: 4,
+      format: 6,
       label: "Matinée Recordings",
-      tracklisting: "6. Pipas - Cruel &amp; Unusual",
+      tracklisting: "6. Cruel &amp; Unusual",
       notes:
         "w/ harper lee, the would be goods,<br />sportique, airport girl, lovejoy and more.",
     },
@@ -915,37 +913,37 @@ export default async function seed() {
   7. cruel & unusual
   8. a cat escaped
   9. emblematic
-  10. [run run run](https://web.archive.org/web/20181017072814/http://pipasforthepeople.com/videos/run-run-run)
+  10. [run run run](https://web.archive.org/web/20181017072814/https://pipasforthepeople.com/videos/run-run-run)
 `
     },
     {
       date: new Date("2003-10-01"),
-      title: "The Matinée Autumn Assortment!",
+      title: "The Matinée Autumn Assortment",
       cat: "mat051",
       hasImage: true,
-      format: 4,
+      format: 6,
       label: "Matinée Recordings",
       tracklisting:
-        "9. pipas - don't remix (exclusively repurposed version of 'don't walk' from golden square)",
+        "9. don't remix (exclusively repurposed version of 'don't walk' from golden square)",
       notes:
         "compilation w/ would-be-goods, harper lee, the pines and other matin&eacute;e stars",
     },
     {
       date: new Date("2003-07-01"),
-      title: "Matinée 50!",
+      title: "Matinée 50",
       cat: "mat050",
       hasImage: true,
-      format: 4,
+      format: 6,
       label: "Matinée Recordings",
-      tracklisting: "7. pipas - you kill me (harper lee cover)",
+      tracklisting: "7. you kill me (harper lee cover)",
     },
     {
       date: new Date("2002-08-01"),
-      title: "chickfactor.com*pilation",
+      title: "v/a all’s fair in love and chickfactor ",
       cat: "enchante005",
       hasImage: true,
-      format: 4,
-      label: "Enchanté",
+      format: 6,
+      label: "Enchanté Records",
       tracklisting: "1. Wells Street",
     },
     {
@@ -959,22 +957,55 @@ export default async function seed() {
         "Release date around our birthdays somewhere mid-late February 2004!",
     },
     {
+      date: new Date("2003-08-01"),
+      title: "Golden Square",
+      cat: "annika04",
+      hasImage: true,
+      format: 4,
+      label: "Annika Records",
+      tracklisting:
+        `
+  1. pidg's brew
+  2. no suspires más
+  3. don't walk
+  4. hard times
+  5. golden square
+  6. south
+  7. hiding in the park
+  8. book launch
+  9. it's too soon
+        `
+    },
+    {
+      date: new Date("2007-05-17"),
+      title: "Mix For The Occupation",
+      cat: "llc05",
+      hasImage: true,
+      format: 4,
+      tracklisting: `
+1. the bowling alley
+2. it's wednesday
+3. mix for the occupation
+      `,
+      label: "Long Lost Cousin",
+    },
+    {
       date: new Date("2004-01-01"),
       title:
         "Romantic and Square is Hip and Aware (A Matin&eacute;e Tribute to The Smiths)",
       cat: "matcd030",
       hasImage: true,
-      format: 4,
+      format: 6,
       label: "Matinée Recordings",
-      tracklisting: "5. pipas - this night has opened my eyes",
+      tracklisting: "5. this night has opened my eyes",
     },
     {
       date: new Date("2004-07-04"),
       title: "Flipside - A Candle Records Collection",
       cat: "candle84",
       hasImage: true,
-      format: 4,
-      label: '<a href="http://www.candlerecords.com.au">Candle Records</a>',
+      format: 6,
+      label: '<a href="https://www.candlerecords.com.au">Candle Records</a>',
       tracklisting: "9. The Lucksmiths - How To Tie A Tie - Remixed by Pipas",
     },
     {
@@ -982,16 +1013,16 @@ export default async function seed() {
       title: "The Matinée Winter Warmer",
       cat: "mat055",
       hasImage: true,
-      format: 4,
+      format: 6,
       label: "Matinée Recordings",
-      tracklisting: "3. pipas - boxes",
+      tracklisting: "3. boxes",
     },
     {
       date: new Date("2005-01-01"),
       title: "Chunnel Autumnal",
       cat: "matcd036",
       hasImage: true,
-      format: 4,
+      format: 2,
       tracklisting: `
   1. tout va bien
   2. don't tell me that
@@ -1014,9 +1045,9 @@ export default async function seed() {
       title: "v/a This is my country",
       cat: "jab2029",
       hasImage: true,
-      format: 4,
-      label: '<a href="http://jabalinamusica.com/">Jabalina Música</a>',
-      tracklisting: "16. pipas - it behooves",
+      format: 6,
+      label: '<a href="https://jabalinamusica.com">Jabalina Música</a>',
+      tracklisting: "16. it behooves (exclusive to this release)",
     },
     {
       date: new Date("2005-05-05"),
@@ -1025,7 +1056,13 @@ export default async function seed() {
       hasImage: true,
       format: 2,
       label: "Long Lost Cousin",
-      notes: "http://itunes.apple.com/us/album/golden-square/id157540077",
+      tracklisting: `
+  1. no puedes pensar
+  2. riff-raff
+  3. yrrkdbk
+  4. the abstract geometries (exclusive to this release)
+  5. sleep = shut up (ellie's song) (exclusive to this release)
+      `
     },
     {
       date: new Date("2005-09-01"),
@@ -1033,9 +1070,9 @@ export default async function seed() {
       cat: "traga001",
       hasImage: true,
       format: 5,
-      label: '<a href="http://www.tragadiscos.com/">Tragadiscos Records</a>',
+      label: '<a href="https://tragadiscos.com">Tragadiscos Records</a>',
       tracklisting:
-        "5. R U<br />w/ the lucksmiths, the shermans, nice man, sodastream &amp; charm filter. ltd to 250 copies!",
+        "5. R U (exclusive to this release)",
       notes:
         "w/ the lucksmiths, the shermans, nice man, sodastream &amp; charm filter. ltd to 250 copies!",
     },
@@ -1044,17 +1081,18 @@ export default async function seed() {
       title: "v/a Bon voyage",
       cat: "jab2033",
       hasImage: true,
-      format: 4,
+      format: 6,
       label: "Jabalina Música",
-      tracklisting: "",
-      notes: "http://itunes.apple.com/us/album/sorry-love/id201064428",
+      tracklisting: `
+17. floortime (exclusive to this release)
+      `,
     },
     {
       date: new Date("2006-09-01"),
       title: "Sorry Love",
       cat: "llc04",
       hasImage: true,
-      format: 2,
+      format: 4,
       label: "Long Lost Cousin",
       tracklisting: `
 1. basements
@@ -1069,5 +1107,18 @@ export default async function seed() {
 10. sorry love
 `,
     },
+    {
+      date: new Date("2010-12-27"),
+      title: "Your Wonderful Parade",
+      cat: "annika99",
+      hasImage: true,
+      format: 6,
+      label: "Annika",
+      tracklisting:
+        `
+  - hard times (remix – exclusive to this release)
+  - somebody else (exclusive to this release)
+        `
+    }
   ]);
 }
