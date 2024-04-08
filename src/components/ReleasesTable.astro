@@ -13,7 +13,7 @@ interface Props {
 const { releases, size } = Astro.props;
 ---
 
-<section class="space-y-8 mt-3 mb-4 sm:p-1">
+<section class="space-y-8 max-w-[48ch] text-pretty">
   {
     releases.map(
       ({ date, title, cat, format, label, tracklisting, notes }, index) => (
@@ -40,7 +40,7 @@ const { releases, size } = Astro.props;
           />
           {notes && (
             <p>
-              <Fragment set:html={notes} />
+              <Fragment set:html={marked.parse(notes)} />
             </p>
           )}
           <p>

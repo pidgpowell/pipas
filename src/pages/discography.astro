@@ -23,12 +23,13 @@ const compilations = (await db
       Discography
     </h2>
 
-    <div class="grid md:grid-cols-2 gap-8">
-      <section>
+    <div class="divide-y divide-solid divide-emerald-400">
+      <section class="py-4">
         <ReleasesTable releases={releases} />
       </section>
-      <section>
-        <h2>Compilations</h2>
+
+      <section class="py-4">
+        <h2 class="text-xl font-bold mb-6">Compilations</h2>
         <ReleasesTable
           releases={compilations}
           size="sm"

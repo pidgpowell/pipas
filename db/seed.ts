@@ -870,7 +870,7 @@ export default async function seed() {
 8. st. pancras
 `,
       notes:
-        "available from us here @ long lost cousin. 5 GBP (pounds) plus shipping. not many left!",
+        "",
     },
     {
       date: new Date("2002-02-16"),
@@ -901,7 +901,7 @@ export default async function seed() {
       title: "A Cat Escaped",
       cat: "matcd021",
       hasImage: true,
-      format: 2,
+      format: 4,
       label: "Matinée Recordings",
       tracklisting: `
   1. what nobody does
@@ -981,7 +981,7 @@ export default async function seed() {
       title: "Mix For The Occupation",
       cat: "llc05",
       hasImage: true,
-      format: 4,
+      format: 2,
       tracklisting: `
 1. the bowling alley
 2. it's wednesday
@@ -1022,7 +1022,7 @@ export default async function seed() {
       title: "Chunnel Autumnal",
       cat: "matcd036",
       hasImage: true,
-      format: 2,
+      format: 4,
       tracklisting: `
   1. tout va bien
   2. don't tell me that
@@ -1038,7 +1038,7 @@ export default async function seed() {
       `,
       label: "Matinée Recordings",
       notes:
-        'our first recordings as pipas! with the addition of the tracks from the short film... 7".',
+        'cd re-issue of our first recordings as pipas! with the addition of the tracks from the *short film about sleeping* 7".',
     },
     {
       date: new Date("2004-12-14"),

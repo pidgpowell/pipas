@@ -37,6 +37,8 @@ export function getStaticPaths() {
 }
 
 const { videos } = Astro.params;
+
+export const prerender = true;
 ---
 
 <YouTube
