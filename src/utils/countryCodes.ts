@@ -1,14 +1,17 @@
 const countryCodes: Record<string, string> = {
   "GB-ENG": "England",
   "GB-SCT": "Scotland",
-  ES: "Spain",
-  SE: "Sweden",
-  EE: "Estonia",
-  GR: "Greece",
-  DE: "Germany",
-  US: "U.S.",
-  IT: "Italy",
   AU: "Australia",
+  DE: "Germany",
+  DK: "Denmark",
+  EE: "Estonia",
+  ES: "Spain",
+  FI: "Finland",
+  GR: "Greece",
+  IT: "Italy",
+  NO: "Norway",
+  SE: "Sweden",
+  US: "U.S.",
 };
 
 export default countryCodes;
