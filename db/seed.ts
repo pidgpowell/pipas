@@ -953,6 +953,14 @@ export default async function seed() {
       hasImage: true,
       format: 2,
       label: "Matinée Recordings",
+      tracklisting: `
+  1. Mental
+  2. Bitter Club
+  3. Sixten
+  4. Minilife
+  5. Jean C
+  6. South (bend-able mix by pandatone)
+      `,
       notes:
         "Release date around our birthdays somewhere mid-late February 2004!",
     },

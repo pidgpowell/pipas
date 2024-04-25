@@ -30,16 +30,16 @@ const { tourdates } = Astro.props;
       {
         tourdates.map(({ date, venue, city, country, other }) => (
           <tr class="border-b hover:bg-emerald-100 border-emerald-100">
-            <td class="py-2 ps-2 leading-tight align-top text-emerald-900">
+            <td class="py-2 leading-tight align-top ps-2 text-emerald-900">
               {dateFormat(date)}
             </td>
-            <td class="max-w-xs py-2 ps-3 leading-tight align-top">
+            <td class="max-w-xs py-2 leading-tight align-top ps-3">
               {venue}, {city}
               <div class="text-gray-600">
                 <Fragment set:html={other} />
               </div>
             </td>
-            <td class="py-2 ps-2 leading-tight align-top">
+            <td class="py-2 leading-tight align-top ps-2">
               {countryCodes[country]}
             </td>
           </tr>

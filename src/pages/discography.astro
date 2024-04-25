@@ -1,6 +1,6 @@
 ---
 import { db, Release, desc, lte, gt } from "astro:db";
-import type { Release as ReleaseType } from "../utils/release";
+import type { Release as ReleaseType } from "../types/release";
 import Layout from "../layouts/Layout.astro";
 import ReleasesTable from "../components/ReleasesTable.astro";
 
@@ -23,13 +23,17 @@ const compilations = (await db
       Discography
     </h2>
 
-    <div class="divide-y divide-solid divide-emerald-400">
+    <div
+      class="divide-y divide-solid divide-emerald-400 grid lg:grid-cols-[0.8fr,1fr] max-w-[1024px] gap-12"
+    >
       <section class="py-4">
+        <h2 class="mb-6 text-xl font-bold">Albums & EPs</h2>
+
         <ReleasesTable releases={releases} />
       </section>
 
       <section class="py-4">
-        <h2 class="text-xl font-bold mb-6">Compilations</h2>
+        <h2 class="mb-6 text-xl font-bold">Compilations</h2>
         <ReleasesTable
           releases={compilations}
           size="sm"
