@@ -1,0 +1,44 @@
+---
+import { db, Release, desc, lte, gt } from "astro:db";
+import type { Release as ReleaseType } from "../types/release";
+import Layout from "../layouts/Layout.astro";
+import ReleasesTable from "../components/ReleasesTable.astro";
+
+const releases = (await db
+  .select()
+  .from(Release)
+  .where(lte(Release.format, 4))
+  .orderBy(desc(Release.date))) as ReleaseType[];
+
+const compilations = (await db
+  .select()
+  .from(Release)
+  .where(gt(Release.format, 4))
+  .orderBy(desc(Release.date))) as ReleaseType[];
+---
+
+<Layout title="Releases | Pipas">
+  <main>
+    <h2 class="pb-2 mt-2 mb-3 text-xl border-b border-emerald-300">
+      Discography
+    </h2>
+
+    <div
+      class="divide-y divide-solid divide-emerald-400 grid lg:grid-cols-[0.8fr,1fr] max-w-[1024px] gap-12"
+    >
+      <section class="py-4">
+        <h2 class="mb-6 text-xl font-bold">Albums & EPs</h2>
+
+        <ReleasesTable releases={releases} />
+      </section>
+
+      <section class="py-4">
+        <h2 class="mb-6 text-xl font-bold">Compilations</h2>
+        <ReleasesTable
+          releases={compilations}
+          size="sm"
+        />
+      </section>
+    </div>
+  </main>
+</Layout>

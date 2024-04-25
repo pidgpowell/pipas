@@ -1,0 +1,33 @@
+---
+import { tv } from "tailwind-variants";
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+const { src, alt, size, loading } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "../../assets/disc/*"
+);
+
+const cover = tv({
+  base: "w-full h-auto",
+  variants: {
+    size: {
+      sm: "max-w-[100px]",
+      md: "max-w-[200px]",
+      lg: "max-w-[400px]",
+    },
+  },
+  defaultVariants: {
+    size: "md",
+  },
+});
+---
+
+<div>
+  <Image
+    src={images[src]()}
+    alt={alt}
+    class={cover({ size: size })}
+    loading={loading}
+  />
+</div>

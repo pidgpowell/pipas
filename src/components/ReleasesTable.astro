@@ -1,0 +1,63 @@
+---
+import dateFormat from "../utils/dateFormat";
+import { formats } from "../types/formats";
+import type { Release as ReleaseType } from "../types/release";
+import Cover from "./Cover.astro";
+import { marked } from "marked";
+
+interface Props {
+  releases: ReleaseType[];
+  size?: "sm" | "md" | "lg";
+}
+
+const { releases, size } = Astro.props;
+---
+
+<section class="space-y-8 max-w-[48ch] text-pretty">
+  {
+    releases.map(
+      ({ date, title, cat, format, label, tracklisting, notes }, index) => (
+        <div>
+          <p class="text-xs uppercase mb-1">
+            {dateFormat(date, {
+              day: undefined,
+              month: "short",
+              timeZone: "UTC",
+            })}
+          </p>
+
+          <span class="flex flex-wrap items-baseline leading-tight gap-1">
+            <h3 class="mb-2 text-lg font-light leading-tight">
+              <span class="font-bold ">
+                <Fragment set:html={title} />
+              </span>
+              <span>{formats[format]}</span>
+            </h3>
+          </span>
+
+          <Cover
+            src={"../../assets/disc/" + cat + ".webp"}
+            alt="Cover art"
+            size={size}
+            loading={index <= 2 ? "eager" : "lazy"}
+          />
+
+          <p class="mt-2 leading-tight text-sm">
+            <Fragment set:html={label} />{" "}
+            <span class="text-sm uppercase opacity-60">({cat})</span>
+          </p>
+
+          {notes && (
+            <div class="mt-2 *:leading-tight *:text-base">
+              <Fragment set:html={marked.parse(notes)} />
+            </div>
+          )}
+
+          <div>
+            {tracklisting && <Fragment set:html={marked.parse(tracklisting)} />}
+          </div>
+        </div>
+      )
+    )
+  }
+</section>
