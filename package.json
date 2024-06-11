@@ -10,10 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.10",
-    "@astrojs/db": "^0.10.3",
+    "@astrojs/check": "^0.7.0",
+    "@astrojs/db": "^0.11.5",
     "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.6.0",
+    "astro": "^4.10.2",
     "astro-devtool-breakpoints": "^0.3.0",
     "marked": "^12.0.1",
     "tailwind-variants": "^0.2.1",
