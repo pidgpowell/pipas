@@ -1059,11 +1059,12 @@ export default async function seed() {
     },
     {
       date: new Date("2005-05-05"),
-      title: "Cinco de Mayo (Long Lost Tour CD)",
+      title: "Cinco de Mayo",
       cat: "llc03",
       hasImage: true,
       format: 2,
       label: "Long Lost Cousin",
+      notes: "Limited tour-only CD",
       tracklisting: `
   1. no puedes pensar
   2. riff-raff
