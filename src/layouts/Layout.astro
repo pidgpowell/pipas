@@ -35,17 +35,11 @@ const pathCheck =
       name="description"
       content="Website for Pipas, a band from London and New York City."
     />
-    <meta
-      name="viewport"
-      content="width=device-width"
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/favicon.svg"
-    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
+
   <body class="h-auto p-4 sm:p-8">
     <header class="flex flex-col sm:flex-row sm:items-center">
       <h1 class="text-4xl font-bold tracking-tight"><a href="/">Pipas</a></h1>
@@ -79,26 +73,12 @@ const pathCheck =
       0 0 repeat;
   }
   ol {
-    @apply list-decimal list-inside mt-2;
+    @apply mt-2 list-inside list-decimal;
   }
   ul {
-    @apply list-disc list-outside mt-2 ms-0 ps-0;
+    @apply ms-0 mt-2 list-outside list-disc ps-0;
     li {
-      @apply leading-snug ms-4 ps-0;
-    }
-  }
-  .disc {
-    width: 100dvw;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2dvw;
-    img {
-      width: 100%;
-      height: auto;
-    }
-    > article {
-      max-width: 300px;
-      min-width: 300px;
+      @apply ms-4 ps-0 leading-snug;
     }
   }
 </style>

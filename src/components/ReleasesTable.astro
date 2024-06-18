@@ -8,56 +8,114 @@ import { marked } from "marked";
 interface Props {
   releases: ReleaseType[];
   size?: "sm" | "md" | "lg";
+  style: "grid" | "list";
 }
 
-const { releases, size } = Astro.props;
+const { style, releases, size } = Astro.props;
 ---
 
-<section class="text-pretty disc">
-  {
-    releases.map(
+{
+  style === "grid" && (
+    <section class="text-pretty flex flex-wrap flex-row gap-8 w-full">
+      {releases.map(
+        ({ date, title, cat, format, label, tracklisting, notes }, index) => (
+          <article class="w-full max-w-[300px]">
+            <p class="text-xs uppercase mb-1">
+              {dateFormat(date, {
+                day: undefined,
+                month: "short",
+                timeZone: "UTC",
+              })}
+            </p>
+
+            <span class="flex flex-wrap items-baseline leading-tight gap-1">
+              <h3 class="mb-2 text-lg font-light leading-tight text-balance flex gap-1">
+                <span class="font-bold">
+                  <Fragment set:html={title} />
+                </span>
+                <span>{formats[format]}</span>
+              </h3>
+            </span>
+
+            <Cover
+              src={"../../assets/disc/" + cat + ".webp"}
+              alt="Cover art"
+              size={size}
+              loading={index <= 2 ? "eager" : "lazy"}
+            />
+
+            <p class="mt-2 leading-tight text-sm">
+              <Fragment set:html={label} />{" "}
+              <span class="text-sm uppercase opacity-60">({cat})</span>
+            </p>
+
+            {notes && (
+              <div class="mt-2 *:leading-tight *:text-base">
+                <Fragment set:html={marked.parse(notes)} />
+              </div>
+            )}
+
+            <div>
+              {tracklisting && (
+                <Fragment set:html={marked.parse(tracklisting)} />
+              )}
+            </div>
+          </article>
+        )
+      )}
+    </section>
+  )
+}
+
+
+{
+  style === "list" && (
+    <section class="text-pretty grid lg:grid-cols-2 xl:grid-cols-3 gap-12 w-full max-w-[70%]">
+      {releases.map(
       ({ date, title, cat, format, label, tracklisting, notes }, index) => (
-        <article>
-          <p class="text-xs uppercase mb-1">
-            {dateFormat(date, {
-              day: undefined,
-              month: "short",
-              timeZone: "UTC",
-            })}
-          </p>
-
-          <span class="flex flex-wrap items-baseline leading-tight gap-1">
-            <h3 class="mb-2 text-lg font-light leading-tight text-balance">
-              <span class="font-bold ">
-                <Fragment set:html={title} />
-              </span>
-              <span>{formats[format]}</span>
-            </h3>
-          </span>
-
+        <article class="flex gap-x-4">
           <Cover
             src={"../../assets/disc/" + cat + ".webp"}
             alt="Cover art"
             size={size}
             loading={index <= 2 ? "eager" : "lazy"}
           />
+          <div >
+            <p class="text-xs uppercase mb-1">
+              {dateFormat(date, {
+                day: undefined,
+                month: "short",
+                timeZone: "UTC",
+              })}
+            </p>
 
-          <p class="mt-2 leading-tight text-sm">
-            <Fragment set:html={label} />{" "}
-            <span class="text-sm uppercase opacity-60">({cat})</span>
-          </p>
+              <h3 class="mb-0 text-lg font-light text-balance flex flex-wrap items-baseline leading-tight gap-1 max-w-[32ch]">
+                <span class="font-bold ">
+                  <Fragment set:html={title} />
+                </span>
+                <span>{formats[format]}</span>
+              </h3>
 
-          {notes && (
-            <div class="mt-2 *:leading-tight *:text-base">
-              <Fragment set:html={marked.parse(notes)} />
+            <p class="mt-0 leading-tight text-sm">
+              <Fragment set:html={label} />{" "}
+              <span class="text-sm uppercase opacity-60">({cat})</span>
+            </p>
+
+            {notes && (
+              <div class="mt-2 *:leading-tight *:text-base">
+                <Fragment set:html={marked.parse(notes)} />
+              </div>
+            )}
+
+            <div>
+              {tracklisting && (
+                <Fragment set:html={marked.parse(tracklisting)} />
+              )}
             </div>
-          )}
-
-          <div>
-            {tracklisting && <Fragment set:html={marked.parse(tracklisting)} />}
           </div>
         </article>
-      )
-    )
-  }
-</section>
+        )
+      )}
+    </section>
+  )
+}

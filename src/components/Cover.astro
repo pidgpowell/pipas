@@ -9,11 +9,11 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 );
 
 const cover = tv({
-  base: "w-full h-auto",
+  base: "w-full h-auto shadow-sm",
   variants: {
     size: {
-      sm: "max-w-[100px]",
-      md: "max-w-[250px]",
+      sm: "min-w-[100px] max-w-[100px]",
+      md: "sm:max-w-[250px]",
       lg: "max-w-[350px]",
     },
   },
