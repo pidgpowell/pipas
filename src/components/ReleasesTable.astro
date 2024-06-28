@@ -78,7 +78,7 @@ const { style, releases, size } = Astro.props;
             src={"../../assets/disc/" + cat + ".webp"}
             alt="Cover art"
             size={size}
-            loading={index <= 2 ? "eager" : "lazy"}
+            loading="lazy"
           />
           <div >
             <p class="text-xs uppercase mb-1">
