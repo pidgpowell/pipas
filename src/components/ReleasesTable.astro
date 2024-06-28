@@ -16,10 +16,10 @@ const { style, releases, size } = Astro.props;
 
 {
   style === "grid" && (
-    <section class="text-pretty flex flex-wrap flex-row gap-8 w-full">
+    <section class="text-pretty discography-grid">
       {releases.map(
         ({ date, title, cat, format, label, tracklisting, notes }, index) => (
-          <article class="w-full max-w-[300px]">
+          <article class="w-full sm:max-w-80 max-w-">
             <p class="text-xs uppercase mb-1">
               {dateFormat(date, {
                 day: undefined,
@@ -70,7 +70,7 @@ const { style, releases, size } = Astro.props;
 
 {
   style === "list" && (
-    <section class="text-pretty grid lg:grid-cols-2 xl:grid-cols-3 gap-12 w-full max-w-[70%]">
+    <section class="text-pretty grid lg:grid-cols-2 xl:grid-cols-3 gap-12 w-full sm:max-w-[70%]">
       {releases.map(
       ({ date, title, cat, format, label, tracklisting, notes }, index) => (
         <article class="flex gap-x-4">
@@ -89,7 +89,7 @@ const { style, releases, size } = Astro.props;
               })}
             </p>
 
-              <h3 class="mb-0 text-lg font-light text-balance flex flex-wrap items-baseline leading-tight gap-1 max-w-[32ch]">
+              <h3 class="mb-0 text-lg font-light text-balance flex flex-wrap items-baseline leading-tight gap-1 sm:max-w-[32ch]">
                 <span class="font-bold ">
                   <Fragment set:html={title} />
                 </span>
@@ -119,3 +119,11 @@ const { style, releases, size } = Astro.props;
     </section>
   )
 }
+
+<style>
+  .discography-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+  }
+</style>
