@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
-    "@astrojs/db": "^0.11.6",
+    "@astrojs/db": "^0.11.7",
     "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.11.0",
+    "astro": "^4.11.3",
     "astro-devtool-breakpoints": "^0.3.0",
     "marked": "^13.0.0",
     "tailwind-variants": "^0.2.1",
