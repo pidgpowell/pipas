@@ -18,23 +18,21 @@ const compilations = (await db
 ---
 
 <Layout title="Releases | Pipas">
-  <main>
-    <h2 class="pb-2 mt-2 mb-3 text-xl border-b border-emerald-300">
-      Discography
-    </h2>
+  <h2 class="pb-2 mt-2 mb-3 text-xl border-b border-emerald-300">
+    Discography
+  </h2>
 
-    <div>
-      <section class="py-4">
-        <h2 class="mb-6 text-xl font-bold">Albums & EPs</h2>
+  <div>
+    <section class="py-4">
+      <h2 class="mb-6 text-xl font-bold">Albums & EPs</h2>
 
-        <ReleasesTable releases={releases} style="grid" size="md" />
-      </section>
+      <ReleasesTable releases={releases} style="grid" size="md" />
+    </section>
 
-      <section class="py-4">
-        <h2 class="mb-6 text-xl font-bold">Compilations</h2>
+    <section class="py-4">
+      <h2 class="mb-6 text-xl font-bold">Compilations</h2>
 
-        <ReleasesTable releases={compilations} size="sm" style="list" />
-      </section>
-    </div>
-  </main>
+      <ReleasesTable releases={compilations} size="sm" style="list" />
+    </section>
+  </div>
 </Layout>
