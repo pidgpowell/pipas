@@ -42,7 +42,7 @@ export default async function seed() {
       city: "Stockholm",
       country: "SE",
       url: "",
-      other: "w/ tender trap, sportique, aerospace & freeloan investments",
+      other: "w/ tender trap, sportique, aerospace & free loan investments",
     },
     {
       date: new Date("2002-08-24"),
