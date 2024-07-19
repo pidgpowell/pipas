@@ -28,7 +28,7 @@ const hasUpcoming = tourdatesUpcoming && tourdatesUpcoming.length > 0;
     {hasUpcoming && <TourdatesTable tourdates={tourdatesUpcoming} />}
     {!hasUpcoming && <p class="text-gray-400">...is hazy.</p>}
 
-    <h3 class="mt-2">The Past</h3>
+    <h3 class="mt-4">The Past</h3>
 
     <TourdatesTable tourdates={tourdates} />
   </main>

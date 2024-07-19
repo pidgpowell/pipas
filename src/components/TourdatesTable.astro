@@ -20,22 +20,22 @@ const { tourdates } = Astro.props;
 >
   <table class="table-auto">
     <thead>
-      <tr class="text-sm font-light text-start">
-        <th class="py-1 ps-2 text-emerald-600 min-w-20">Date</th>
-        <th class="py-2 ps-3 text-emerald-600">Venue</th>
-        <th class="py-2 ps-2 text-emerald-600">Country</th>
+      <tr class="text-sm font-light">
+        <th class="py-1 ps-2 text-emerald-600 min-w-20 text-start">Date</th>
+        <th class="py-2 ps-3 text-emerald-600 text-start">Venue</th>
+        <th class="py-2 ps-2 text-emerald-600 text-start">Country</th>
       </tr>
     </thead>
     <tbody class="font-normal">
       {
         tourdates.map(({ date, venue, city, country, other }) => (
-          <tr class="border-b hover:bg-emerald-100 border-emerald-100">
+          <tr class="border-b hover:bg-emerald-100 border-emerald-200 pt-2">
             <td class="py-2 leading-tight align-top ps-2 text-emerald-900">
               {dateFormat(date)}
             </td>
             <td class="max-w-xs py-2 leading-tight align-top ps-3">
-              {venue}, {city}
-              <div class="text-gray-600">
+              <b class="font-medium">{venue}</b>, {city}
+              <div class="text-gray-600 text-base leading-tight font-light my-1">
                 <Fragment set:html={other} />
               </div>
             </td>
