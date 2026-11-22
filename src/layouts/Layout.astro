@@ -1,4 +1,6 @@
 ---
+import "../styles/global.css";
+
 interface Props {
   title: string;
 }
@@ -68,19 +70,3 @@ const pathCheck =
     </main>
   </body>
 </html>
-
-<style is:global>
-  body {
-    background: url(https://res.cloudinary.com/pipas/image/upload/v1606135066/background-mountains_dretlx.gif)
-      0 0 repeat;
-  }
-  ol {
-    @apply mt-2 list-inside list-decimal;
-  }
-  ul {
-    @apply ms-0 mt-2 list-outside list-disc ps-0;
-    li {
-      @apply ms-4 ps-0 leading-snug;
-    }
-  }
-</style>
