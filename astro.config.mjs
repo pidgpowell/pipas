@@ -1,10 +1,9 @@
 import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
-import db from "@astrojs/db";
-
-import devtoolBreakpoints from "astro-devtool-breakpoints";
+import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), db(), devtoolBreakpoints()]
+  vite: {
+    plugins: [tailwindcss()]
+  }
 });

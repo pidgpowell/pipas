@@ -1,11 +1,3 @@
-export interface Release {
-  _id?: string;
-  date: Date;
-  title: string;
-  cat: string;
-  format: number;
-  label: string;
-  hasImage?: boolean;
-  tracklisting?: string;
-  notes?: string;
-}
+import type { CollectionEntry } from "astro:content";
+
+export type Release = CollectionEntry<"releases">["data"];

@@ -1,20 +1,19 @@
 ---
-import { db, Tourdate, desc, gte, lt } from "astro:db";
+import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import TourdatesTable from "../components/TourdatesTable.astro";
 
-const tourdates = await db
-  .select()
-  .from(Tourdate)
-  .where(lt(Tourdate.date, new Date()))
-  .orderBy(desc(Tourdate.date));
-
-const tourdatesUpcoming = await db
-  .select()
-  .from(Tourdate)
-  .where(gte(Tourdate.date, new Date()))
-  .orderBy(desc(Tourdate.date));
-const hasUpcoming = tourdatesUpcoming && tourdatesUpcoming.length > 0;
+const now = new Date();
+const byDateDescending = (a: { date: Date }, b: { date: Date }) =>
+  b.date.getTime() - a.date.getTime();
+const allTourdates = (await getCollection("tourdates")).map(({ data }) => data);
+const tourdates = allTourdates
+  .filter(({ date }) => date < now)
+  .sort(byDateDescending);
+const tourdatesUpcoming = allTourdates
+  .filter(({ date }) => date >= now)
+  .sort(byDateDescending);
+const hasUpcoming = tourdatesUpcoming.length > 0;
 ---
 
 <Layout title="Tour dates | Pipas">

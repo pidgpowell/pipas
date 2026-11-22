@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+body {
+  background: url("https://res.cloudinary.com/pipas/image/upload/v1606135066/background-mountains_dretlx.gif")
+    0 0 repeat;
+}
+
+ol {
+  margin-top: 0.5rem;
+  list-style-position: inside;
+  list-style-type: decimal;
+}
+
+ul {
+  margin-top: 0.5rem;
+  margin-inline-start: 0;
+  padding-inline-start: 0;
+  list-style-position: outside;
+  list-style-type: disc;
+}
+
+ul li {
+  margin-inline-start: 1rem;
+  padding-inline-start: 0;
+  line-height: 1.375;
+}

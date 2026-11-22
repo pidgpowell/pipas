@@ -1,20 +1,18 @@
 ---
-import { db, Release, desc, lte, gt } from "astro:db";
+import { getCollection } from "astro:content";
 import type { Release as ReleaseType } from "../types/release";
 import Layout from "../layouts/Layout.astro";
 import ReleasesTable from "../components/ReleasesTable.astro";
 
-const releases = (await db
-  .select()
-  .from(Release)
-  .where(lte(Release.format, 4))
-  .orderBy(desc(Release.date))) as ReleaseType[];
-
-const compilations = (await db
-  .select()
-  .from(Release)
-  .where(gt(Release.format, 4))
-  .orderBy(desc(Release.date))) as ReleaseType[];
+const byDateDescending = (a: ReleaseType, b: ReleaseType) =>
+  b.date.getTime() - a.date.getTime();
+const allReleases = (await getCollection("releases")).map(({ data }) => data);
+const releases = allReleases
+  .filter(({ format }) => format <= 4)
+  .sort(byDateDescending);
+const compilations = allReleases
+  .filter(({ format }) => format > 4)
+  .sort(byDateDescending);
 ---
 
 <Layout title="Releases | Pipas">
